@@ -25,6 +25,12 @@ img {
   height: 100%;
 }
 
+/* OUTLINE STYLES */
+*:focus {
+  outline: 2px dashed #7296ec;
+  outline-offset: 3px;
+}
+
 /* BUTTON */
 .button {
   display: inline-block;
@@ -115,6 +121,26 @@ img {
 .currency-rates-value {
   line-height: 19px;
   color: #555;
+}
+
+/* SEARCH FORM */
+.search-form {
+
+}
+
+.search-form-input {
+  width: 275px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 13px;
+  padding-left: 40px;
+  border-radius: 60px;
+  border: none;
+  margin-right: 25px;
+  font-size: 14px;
+  line-height: normal;
+  color: #8d8d8d;
+  background-color: #fff;
 }
 
 /* LANG TOGGLE */
