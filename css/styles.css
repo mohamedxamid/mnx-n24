@@ -464,6 +464,9 @@ img {
   border-radius: 15px;
   object-fit: cover;
 }
+.sidebar-ad-img-tall {
+  height: 553px;
+}
 
 /* SITE-FOOTER */
 .site-footer {
