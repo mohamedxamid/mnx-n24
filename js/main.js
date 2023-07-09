@@ -1,12 +1,12 @@
 const elModalOpener = document.querySelector('.button-orange');
-const elModal = document.querySelector('#modal');
-const elModalCloser = document.querySelector('.modal-close');
+const elModal = document.querySelector('#notifications-modal');
+const elModalClose = elModal.querySelector('.js-modal-close');
 
 elModalOpener.addEventListener('click', function() {
     elModal.classList.add('modal-open');
 })
 
-elModalCloser.addEventListener('click', function() {
+elModalClose.addEventListener('click', function() {
     elModal.classList.remove('modal-open');
 })
 
