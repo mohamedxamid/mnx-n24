@@ -1,6 +1,20 @@
+const modifiers = {
+    sitenavTogglerActive: "site-header__sitenav-toggler--active",
+    siteHeaderActive: "site-header--active"
+}
+
 const elModalOpener = document.querySelector('.button-orange');
 const elModal = document.querySelector('#notifications-modal');
 const elModalClose = document.querySelector('.js-modal-close');
+const elSitenavToggler = document.querySelector('.site-header__sitenav-toggler');
+const elSiteHeader = document.querySelector('.site-header');
+
+if (elSitenavToggler) {
+    elSitenavToggler.addEventListener('click', function () {
+        elSitenavToggler.classList.toggle(modifiers.sitenavTogglerActive);
+        elSiteHeader.classList.toggle(modifiers.siteHeaderActive);
+    })
+}
 
 if (elModal) {
     elModalOpener.addEventListener('click', function() {
