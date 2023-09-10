@@ -1047,6 +1047,34 @@ only screen and (                min-resolution: 2dppx) {
         margin: 50px 65px;
         padding: 25px;
     }
+
+    .layout-2-1 {
+        flex-wrap: wrap;
+    }
+
+    .layout-2-1-main {
+        width: 100%;
+    }
+
+    .news-list {
+        margin-right: 0;
+    }
+
+    .layout-2-1-sidebar {
+        width: 100%;
+        display: flex;
+    }
+
+    .layout-2-1-sidebar-item:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 24px;
+    }
+
+    .sidebar-ad {
+        width: 100%;
+        max-width: 272px;
+        flex-shrink: 0;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1071,6 +1099,31 @@ only screen and (                min-resolution: 2dppx) {
     .notification-cta {
         margin: 50px 0px;
         padding: 20px 17px 15px;
+    }
+
+    .layout-2-1-sidebar {
+        flex-direction: column;
+    }
+
+    .layout-2-1-sidebar-item:not(:last-child) {
+        margin-bottom: 16px;
+        margin-right: 0;
+    }
+
+    .article-card-horizontal {
+        flex-direction: column;
+    }
+
+    .article-card-horizontal-img {
+        margin-right: 0;
+        width: 100%;
+        max-width: 360px;
+        height: 165px;
+        margin-bottom: 16px;
+    }
+
+    .sidebar-ad {
+        max-width: 100%;
     }
 }
 
@@ -1123,5 +1176,10 @@ only screen and (                min-resolution: 2dppx) {
 @media only screen and (max-width: 310px) {
     .site-header-logo {
         flex-shrink: 1;
+    }
+
+    .main-content .container {
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
