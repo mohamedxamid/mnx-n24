@@ -8,11 +8,19 @@ const elModal = document.querySelector('#notifications-modal');
 const elModalClose = document.querySelector('.js-modal-close');
 const elSitenavToggler = document.querySelector('.site-header__sitenav-toggler');
 const elSiteHeader = document.querySelector('.site-header');
+const elSitenavTogglerClose = document.querySelector('.sitenav-toggler-close');
 
 if (elSitenavToggler) {
     elSitenavToggler.addEventListener('click', function () {
         elSitenavToggler.classList.toggle(modifiers.sitenavTogglerActive);
         elSiteHeader.classList.toggle(modifiers.siteHeaderActive);
+    })
+}
+
+if (elSitenavTogglerClose) {
+    elSitenavTogglerClose.addEventListener('click', function () {
+        elSitenavToggler.classList.toggle(modifiers.sitenavTogglerActive);
+        elSiteHeader.classList.remove(modifiers.siteHeaderActive);
     })
 }
 
