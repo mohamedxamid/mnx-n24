@@ -1095,6 +1095,23 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
+@media only screen and (max-width: 700px) {
+    .contact-page-content {
+        flex-direction: column;
+    }
+
+    .contact-page-form {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .contact-page-info {
+        width: 100%;
+        max-width: 494px;
+        margin-left: 0;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .site-header-top-container {
         flex-wrap: wrap;
@@ -1149,6 +1166,18 @@ only screen and (                min-resolution: 2dppx) {
     .site-footer {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .form-groups-wrapper {
+        flex-direction: column;
+    }
+
+    .form-groups-wrapper .form-group {
+        width: 100%;
+    }
+
+    .form-group:not(:last-child) {
+        margin-bottom: 10px;
     }
 }
 
