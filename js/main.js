@@ -4,11 +4,33 @@ const modifiers = {
 }
 
 const elModalOpener = document.querySelector('.button-orange');
-const elModal = document.querySelector('#notifications-modal');
-const elModalClose = document.querySelector('.js-modal-close');
-const elSitenavToggler = document.querySelector('.site-header__sitenav-toggler');
-const elSiteHeader = document.querySelector('.site-header');
-const elSitenavTogglerClose = document.querySelector('.sitenav-toggler-close');
+    elModal = document.querySelector('#notifications-modal'),
+    elModalClose = document.querySelector('.js-modal-close'),
+    elSitenavToggler = document.querySelector('.site-header__sitenav-toggler'),
+    elSiteHeader = document.querySelector('.site-header'),
+    elSitenavTogglerClose = document.querySelector('.sitenav-toggler-close'),
+    form = document.querySelector('form.contact-page-form');
+    console.log(form);
+
+    if (form) {
+        form.addEventListener('submit', (evt) => {
+            evt.preventDefault();
+
+            const formData = new FormData(evt.target)
+            const json = JSON.stringify(Object.fromEntries(formData.entries()))
+            fetch('http://localhost:3000/requests', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: json,
+            })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch((err) => console.log(err))
+            .finally(() => evt.target.reset())
+        })
+    }
 
 if (elSitenavToggler) {
     elSitenavToggler.addEventListener('click', function () {
